@@ -1,0 +1,103 @@
+body,
+html {
+  font: 16px/1.4 'Georgia', sans-serif;
+}
+
+.page {
+  max-width: 100%;
+  margin-top: 30px;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  text-align: center;
+  margin-bottom: 0.7em;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.galleryItem {
+  width: 25%;
+  display: inline-block;
+}
+
+.card {
+  position: relative;
+  display: block; 
+  color: white;
+  background: white;
+  background-color: rgba(255, 255, 255, 0.445);
+  border-radius: 50%;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.card:hover, .card:visited {
+  color: white;
+}
+
+.card:hover .cardContent {
+  opacity: 1;
+}
+
+.card:hover .cardHover {
+  opacity: 1;
+}
+
+.cardContent, .cardHover  {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.card:hover .cardImage {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.cardContent {
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  box-sizing: border-box;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.cardHover  {
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.cardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  vertical-align: top;
+  transform: scale(1);
+  transition: transform 3s;
+} 
+
+.cardTitle {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-align: center;
+  margin-bottom: 0.2em;
+  color: #daa35b;
+}
